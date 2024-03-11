@@ -9,6 +9,6 @@ const httpClient = axios.create({
 
 const fetcher = (url: string) => httpClient(url).then(({data}) => data)
 
-export function useData(url: string) {
-    return useSWR(url, fetcher)
+export function useData<T>(url: string) {
+    return useSWR<T>(url, fetcher)
 }
