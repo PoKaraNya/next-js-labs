@@ -1,15 +1,16 @@
 'use client'
 import {useGetPosts} from "@/http/articles";
+import {Error, Loading} from "@/app/_components";
 
 export default function ArticlesPage() {
     const {data, isLoading, error} = useGetPosts()
 
     if (isLoading) {
-        return <>Loading...</>
+        return <Loading/>
     }
 
     if (error || !data) {
-        return <>Error</>
+        return <Error/>
     }
 
     return (
