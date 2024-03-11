@@ -1,5 +1,5 @@
 'use client'
-import {useGetPosts} from "@/http/articles";
+import {useGetPosts} from "@/http/posts";
 import {Error, Loading} from "@/app/_components";
 
 export default function ArticlesPage() {

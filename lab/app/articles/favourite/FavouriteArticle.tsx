@@ -1,4 +1,4 @@
-import {Post} from "@/app/types";
+import {Post} from "@/types";
 
 interface Props extends Post{}
 

@@ -1,5 +1,5 @@
 import {useData} from "@/hooks";
-import {Post} from "@/app/types";
+import type {Post} from "@/types";
 
 export const useGetPosts = () => useData<Post[]>('/posts')
 
