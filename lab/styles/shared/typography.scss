@@ -1,0 +1,30 @@
+$font-family-sans-serif: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family-serif: Georgia, 'Times New Roman', Times, serif;
+$font-family-monospace: 'Courier New', Courier, monospace;
+
+$font-size-base: 1rem;
+$font-size-lg: 1.25rem;
+$font-size-sm: 0.875rem;
+
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
+
+$line-height-base: 1.5;
+$line-height-lg: 1.75;
+$line-height-sm: 1.25;
+
+:export {
+  fontFamilySansSerif: $font-family-sans-serif;
+  fontFamilySerif: $font-family-serif;
+  fontFamilyMonospace: $font-family-monospace;
+  fontSizeBase: $font-size-base;
+  fontSizeLg: $font-size-lg;
+  fontSizeSm: $font-size-sm;
+  fontWeightLight: $font-weight-light;
+  fontWeightNormal: $font-weight-normal;
+  fontWeightBold: $font-weight-bold;
+  lineHeightBase: $line-height-base;
+  lineHeightLg: $line-height-lg;
+  lineHeightSm: $line-height-sm;
+}

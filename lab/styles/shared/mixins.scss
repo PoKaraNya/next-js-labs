@@ -1,0 +1,38 @@
+@mixin center-both {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin linear-gradient($color1, $color2) {
+  background: linear-gradient($color1, $color2);
+}
+
+@mixin radial-gradient($color1, $color2) {
+  background: radial-gradient($color1, $color2);
+}
+
+@mixin prefix($property, $value) {
+  -webkit-#{$property}: $value;
+  -moz-#{$property}: $value;
+  -ms-#{$property}: $value;
+  -o-#{$property}: $value;
+  #{$property}: $value;
+}
+
+@mixin clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+:export {
+  centerBoth: center-both;
+  linearGradient: linear-gradient;
+  radialGradient: radial-gradient;
+  prefix: prefix;
+  clearfix: clearfix;
+}

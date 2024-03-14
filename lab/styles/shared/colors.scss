@@ -1,0 +1,39 @@
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+
+$text-color: #333;
+$text-muted: #6c757d;
+$text-light: #6c757d;
+
+$body-bg: #fff;
+$card-bg: #f8f9fa;
+
+$link-color: #007bff;
+$link-hover-color: darken($link-color, 15%);
+
+$btn-primary-bg: $primary-color;
+$btn-primary-color: #fff;
+
+$border-color: #dee2e6;
+
+$alert-info-bg: #d1ecf1;
+$alert-info-border: #bee5eb;
+$alert-info-text: #0c5460;
+
+:export {
+  primaryColor: $primary-color;
+  secondaryColor: $secondary-color;
+  textColor: $text-color;
+  textMutedColor: $text-muted;
+  textLight: $text-light;
+  bodyBg: $body-bg;
+  cardBg: $card-bg;
+  linkColor: $link-color;
+  linkHoverColor: $link-hover-color;
+  btnPrimaryBg: $btn-primary-bg;
+  btnPrimaryColor: $btn-primary-color;
+  borderColor: $border-color;
+  alertInfoBg: $alert-info-bg;
+  alertInfoBorder: $alert-info-border;
+  alertInfoText: $alert-info-text;
+}

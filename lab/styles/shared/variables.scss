@@ -1,0 +1,30 @@
+$width-small: 100px;
+$width-medium: 200px;
+$width-large: 300px;
+
+$height-small: 50px;
+$height-medium: 100px;
+$height-large: 150px;
+
+$padding-small: 5px;
+$padding-medium: 10px;
+$padding-large: 15px;
+
+$margin-small: 5px;
+$margin-medium: 10px;
+$margin-large: 15px;
+
+:export {
+  widthSmall: $width-small;
+  widthMedium: $width-medium;
+  widthLarge: $width-large;
+  heightSmall: $height-small;
+  heightMedium: $height-medium;
+  heightLarge: $height-large;
+  paddingSmall: $padding-small;
+  paddingMedium: $padding-medium;
+  paddingLarge: $padding-large;
+  marginSmall: $margin-small;
+  marginMedium: $margin-medium;
+  marginLarge: $margin-large;
+}

@@ -1,0 +1,19 @@
+@import "../shared/colors";
+@import "../shared/typography";
+@import "../shared/variables";
+
+.link {
+  padding: $padding-small;
+  font-family: $font-family-sans-serif;
+  font-size: $font-size-base;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-base;
+  background: $primary-color;
+  color: $secondary-color;
+}
+
+.link_active {
+  background: $secondary-color;
+  color: $primary-color;
+  text-decoration: underline;
+}
