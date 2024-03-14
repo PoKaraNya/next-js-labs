@@ -1,7 +1,5 @@
-'use client'
-import {useGetCommentById, useGetPostById} from "@/http";
-import {Error, Loading} from "@/app/_components";
-import {Comment} from "@/app/_components/Comment";
+import {httpClient} from "@/hooks";
+import {Comment} from "@/app/_components"
 
 interface Params {
     params: {
@@ -9,33 +7,31 @@ interface Params {
     }
 }
 
-export default function ArticlesIdPage({params}: Params) {
+export function generateStaticParams() {
+    return new Array(10)
+        .fill(null)
+        .map((_value, index) => (index + 1).toString());
+}
 
-    const post = useGetPostById(params.id)
-    const comment = useGetCommentById(params.id)
+export default async function ArticlesIdPage({params}: Params) {
 
-    if (post.isLoading || comment.isLoading) {
-        return <Loading/>
-    }
-
-    if (post.error || !post.data || comment.error || !comment.data) {
-        return <Error/>
-    }
+    const post = await httpClient(`/posts/${params.id}`).then(({data}) => data)
+    const comment = await httpClient(`/posts/${params.id}/comments`).then(({data}) => data)
 
     return (
         <>
             <div>
-                {post.data.title}
+                {post?.title}
             </div>
             <div>
-                ID: {post.data.id}
+                ID: {post?.id}
             </div>
             <div>
-                UserID: {post.data.userId}
+                UserID: {post?.userId}
             </div>
             <div className='flex flex-col gap-2 px-2'>
                 {
-                    comment.data.map((element) => (
+                    comment.map((element: any) => (
                         <Comment key={element.id} {...element}/>
                     ))
                 }

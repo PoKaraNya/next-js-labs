@@ -2,7 +2,7 @@ import useSWR from "swr"
 import axios from "axios";
 import {API_HOST} from "@/constants";
 
-const httpClient = axios.create({
+export const httpClient = axios.create({
     baseURL: API_HOST,
     method: "GET"
 })
