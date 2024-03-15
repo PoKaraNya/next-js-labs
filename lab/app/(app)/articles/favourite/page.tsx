@@ -1,7 +1,7 @@
 'use client'
 import {useGetPostById} from "@/http";
 import {Error, Loading} from "@/app/_components";
-import {FavouriteArticle} from "@/app/articles/favourite/FavouriteArticle";
+import {FavouriteArticle} from "@/app/(app)/articles/favourite/FavouriteArticle";
 
 export default function ArticleFavouritePage() {
     const post1 = useGetPostById(1)
