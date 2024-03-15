@@ -1,3 +1,4 @@
+import { AntdRegistry } from '@ant-design/nextjs-registry'
 import '../styles/globals.scss'
 
 export const metadata = {
@@ -12,7 +13,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <AntdRegistry>{children}</AntdRegistry>
+      </body>
     </html>
   )
 }
